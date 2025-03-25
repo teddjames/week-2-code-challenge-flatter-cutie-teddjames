@@ -1,61 +1,130 @@
-html {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-html, body {
+/* Basic Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
 }
 
-.logo{
-  text-align: center;
-  background-color: rgb(49, 109, 179);
+/* Header Title */
+.logo {
+  background-color: #2c64b8; /* or a color of your choice */
   color: white;
-  padding: 0.5em;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+.logo h1 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
+/* Character Bar */
 #character-bar {
-  height: 15vh;
-  background: rgb(49, 109, 179);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 3vh;
-}
-
-#character-bar span {
-  padding: 1%;
-  height: 80%;
-  width: 8vw;
   display: flex;
   justify-content: center;
-  font-size: 3vh;
   align-items: center;
-  border-radius: 2em;
-  border: 1px solid white;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  background-color: #fff;
+  border-bottom: 2px dotted #888;
 }
 
-.characterInfo{
-  height: 550px;
-  padding: 30px;
-  font-size: 24px;
-  border: dotted;
+/* Each Character Bubble */
+#character-bar span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: #eee;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#character-bar span:hover {
+  background-color: #ddd;
+}
+
+/* Main Character Info Container */
+.characterInfo {
+  max-width: 600px;
+  margin: 1.5rem auto;
   text-align: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
-input[type="submit"], button {
-  background-color: rgb(49, 109, 179);
-  color: white;
-  font-size: 18px;
-  border-radius: 6px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+/* Detailed Info Section */
+#detailed-info {
+  margin: 1rem 0;
+}
+#detailed-info #name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+#detailed-info img {
+  max-width: 200px;
+  height: auto;
+  margin: 1rem 0;
+}
+#detailed-info h4 {
+  margin: 0.5rem 0;
+}
+#vote-count {
+  font-weight: bold;
 }
 
-input[type="text"] {
-  font-size: 3vh;
+/* Votes Form */
+#votes-form {
+  display: inline-block;
+  margin: 1rem 0;
+}
+#votes {
+  padding: 0.3rem 0.5rem;
+  margin-right: 0.5rem;
+  width: 120px;
+}
+#votes-form input[type="submit"] {
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
 }
 
-#image{
-  width: 300px;
-  height: 300px;
+/* Reset Votes Button */
+#reset-btn {
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+/* Bonus: New Character Form */
+#character-form {
+  margin: 1rem auto;
+  text-align: left;
+  display: inline-block;
+}
+#character-form div {
+  margin-bottom: 0.5rem;
+}
+#character-form label {
+  display: inline-block;
+  width: 100px;
+  font-weight: 500;
+}
+#character-form input[type="text"] {
+  padding: 0.3rem;
+  width: 200px;
+}
+#character-form input[type="submit"] {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
 }
